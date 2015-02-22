@@ -4,7 +4,7 @@ from sklearn.pipeline import Pipeline
 import numpy as np
 
 def model(X_train, y_train, X_test):
-	clf = Pipeline([('imputer', Imputer()), ('rf', RandomForestClassifier(n_estimators=50))])
+	clf = Pipeline([('imputer', Imputer()), ('rf', RandomForestClassifier(n_estimators=60))])
  	clf.fit(X_train, y_train)
 	y_pred = clf.predict(X_test)
 	y_score = clf.predict_proba(X_test)
